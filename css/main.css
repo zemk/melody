@@ -1,14 +1,23 @@
-*{
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("BebasNeueRegular"),
+    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 .header {
   background-color: #635854;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom:  4px solid #3596f5;
+  border-bottom: 4px solid #3596f5;
 }
 .navbar {
   max-width: 1280px;
@@ -24,15 +33,12 @@ body{
   list-style: none;
   display: flex;
   text-align: center;
-  
 }
 .navbar-item {
   margin-right: 40px;
   margin-left: 40px;
-
-
 }
-.navbar-link{
+.navbar-link {
   text-decoration: none;
   color: #fff;
 }
@@ -40,8 +46,7 @@ body{
   display: block;
   color: #fff;
   margin-bottom: 4px;
-  font-size: 14px;
-  line-height: 16;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -55,4 +60,62 @@ body{
   line-height: 20px;
   text-decoration: none;
   color: #fff;
+}
+.main {
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 54px;
+  display: flex;
+}
+
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+}
+.home-image path:hover {
+  opacity: 1;
+}
+.arrow {
+  cursor: pointer;
+}
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter-button {
+  border: none;
+  background-color: #fff;
+}
+.counter-down {
+  transform: rotateX(180deg);
+}
+.main-title {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 37px;
+  color: #635854;
+}
+.counter {
+  color: #635854;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 124px;
+  margin-top: 10px;
+}
+.button-primary {
+  background: #3596f5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 16px 36px;
 }
