@@ -3,6 +3,9 @@ $(document).ready(function () {
   var floorPaht = $('.home-image path' );
   var counteUp =$('.counter-up');
   var counteDown =$('.counter-down');
+  var modal = $('.modal');
+  var modalCloseButton =$('.modal-close-button');
+  var viewFlats =$('.view-flats');
     floorPaht.on('mouseover', function (){
     floorPaht.removeClass('current-floor')
     currentFloor = $(this).attr('data-floor');
@@ -26,5 +29,13 @@ $(document).ready(function () {
       $(`[data-floor = ${usCurrentFloor}]` ).toggleClass('current-floor');
     }
   });
+  floorPaht.on('click', toggleModal)
+  modalCloseButton.on('click', toggleModal);
+  viewFlats.on('click', toggleModal);
+
+  function toggleModal () {
+    modal.toggleClass('is-open');
+  }
+  
 
 });
