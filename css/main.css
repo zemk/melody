@@ -120,6 +120,7 @@ path.current-floor {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  color: #fff;
   padding: 16px 36px;
 }
 .modal {
